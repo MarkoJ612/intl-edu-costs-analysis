@@ -44,12 +44,7 @@ compare_unis = pd.concat([top5, middle5, bottom5]).sort_values(by='Total_Annual_
 compare_unis['Group'] = ['Top']*3 + ['Middle']*3 + ['Bottom']*3
 
 plt.figure(figsize=(12,7))
-sns.barplot(data=compare_unis, 
-            x='Total_Annual_Cost', 
-            y='University', 
-            hue='Group', 
-            dodge=False,
-            palette='Set2')
+sns.barplot(data=compare_unis, x='Total_Annual_Cost', y='University', hue='Group', dodge=False, palette='Set2')
 plt.title('Top 3 vs Middle 3 vs Bottom 3 Universities by Total Annual Cost')
 plt.xlabel('Total Annual Cost (USD)')
 plt.ylabel('University')
